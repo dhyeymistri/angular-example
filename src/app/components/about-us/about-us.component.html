@@ -1,0 +1,122 @@
+<div class="row" style="width: 100%;">
+    <div class="col" *ngFor="let a of accordianData">
+      <div class="accordion" id="{{a.outerId}}">
+        <div class="accordion-item bg-custom-black">
+          <h2 class="accordion-header">
+            <button class="accordion-button text-black" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#'+a.innerId1" aria-expanded="true" [attr.aria-controls]="a.innerId1">
+              {{a.acTitle}}
+            </button>
+          </h2>
+          <div id="{{a.innerId1}}" class="accordion-collapse collapse show">
+            <div class="accordion-body d-flex justify-content-center">
+              <img [src]="a.acImg_path" height="300px" width="300px">
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item bg-custom-black">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed text-black" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#'+a.innerId2"  aria-expanded="false" [attr.aria-controls]="a.innerId2">
+              What do they do
+            </button>
+          </h2>
+          <div id="{{a.innerId2}}" class="accordion-collapse collapse">
+            <div class="accordion-body tx-orange">
+              {{a.acWhat}}
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item  bg-custom-black">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#'+a.innerId3" aria-expanded="false" [attr.aria-controls]="a.innerId3">
+              Qualifications
+            </button>
+          </h2>
+          <div id="{{a.innerId3}}" class="accordion-collapse collapse">
+            <div class="accordion-body tx-orange">
+              {{a.acQual}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="col">
+      <div class="accordion" id="PresiAcc">
+        <div class="accordion-item bg-custom-black">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#presiImg" aria-expanded="true" aria-controls="presiImg">
+              Mr. President, President
+            </button>
+          </h2>
+          <div id="presiImg" class="accordion-collapse collapse show">
+            <div class="accordion-body d-flex justify-content-center tx-orange">
+              <img src="assets/images/employee.jpg" height="300px" width="300px">
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item bg-custom-black">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#presiWork" aria-expanded="false" aria-controls="presiWork">
+              What do they do
+            </button>
+          </h2>
+          <div id="presiWork" class="accordion-collapse collapse">
+            <div class="accordion-body tx-orange">
+              This individual leads and manages the board of directors. They are responsible for setting agendas, running successful board meetings, establishing committees, and other duties. They normally represent the company at public events.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item bg-custom-black">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#presiEd" aria-expanded="false" aria-controls="presiEd">
+              Qualifications
+            </button>
+          </h2>
+          <div id="presiEd" class="accordion-collapse collapse">
+            <div class="accordion-body tx-orange">
+              Here comes the educational qualifications of the President
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="accordion" id="secyAcc">
+        <div class="accordion-item bg-custom-black">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#secyImg" aria-expanded="true" aria-controls="secyImg">
+              Mr. Secretary, Secretary
+            </button>
+          </h2>
+          <div id="secyImg" class="accordion-collapse collapse show">
+            <div class="accordion-body d-flex justify-content-center tx-orange">
+              <img src="assets/images/employee.jpg" height="300px" width="300px">
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item bg-custom-black">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#secyWork" aria-expanded="false" aria-controls="secyWork">
+              What do they do
+            </button>
+          </h2>
+          <div id="secyWork" class="accordion-collapse collapse">
+            <div class="accordion-body tx-orange">
+              The secretary manages the board's administrative tasks. They take the board meeting minutes and maintain accurate corporate records.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item bg-custom-black">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#secyEd" aria-expanded="false" aria-controls="secyEd">
+              Qualifications
+            </button>
+          </h2>
+          <div id="secyEd" class="accordion-collapse collapse">
+            <div class="accordion-body tx-orange">
+              Here comes the educational qualifications of the Secretary
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+</div>

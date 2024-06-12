@@ -1,0 +1,17 @@
+<!-- <div *ngFor="let aName of arrAssessments">
+    {{aName.id}} - {{aName.assessmentName}} and marks are {{aName.assessmentTotalMarks}}
+</div>
+<div *ngFor="let user of Users">
+    {{user.id}} - {{user.userName}} and marks are {{user.userMarks}}
+</div> -->
+
+<div class="row d-flex justify-content-center" style="width: 100%;">
+    <div class="card m-5" *ngFor="let aName of arrAssessments" style="width: 18rem;">
+        <img [src]="aName.assessmentImgSrc" class="card-img-top" alt="..." height="250px" width="250px">
+        <div class="card-body">
+          <h5 class="card-title">{{aName.assessmentName}}</h5>
+          <p class="card-text">Random text</p>
+          <a href="#" class="btn btn-primary">View more</a>
+        </div>
+      </div>
+</div>

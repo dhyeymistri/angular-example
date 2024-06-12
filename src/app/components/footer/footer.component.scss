@@ -1,0 +1,210 @@
+/* COLORS #B7B9A8   #D1B5A3   #E36858   #0C0D0D */
+.bg-mist{
+    background:#B7B9A8;
+  }
+  
+  .bg-sand{
+    background:#D1B5A3;
+  }
+  
+  .bg-orange{
+    background:#E36858;
+  }
+  
+  .bg-custom-black{
+    background:#0C0D0D;
+  }
+  
+  .tx-mist{
+    color:#B7B9A8;
+  }
+  
+  .tx-sand{
+    color:#D1B5A3;
+  }
+  
+  .tx-orange{
+    color:#E36858;
+  }
+  
+  .tx-custom-black{
+    color:#0C0D0D;
+  }
+  
+  .tx-hov-mist:hover{
+    color:#B7B9A8;
+  }
+  
+  .tx-hov-sand:hover{
+    color:#D1B5A3;
+  }
+  
+  .tx-hov-orange:hover{
+    color:#E36858;
+  }
+  
+  .tx-hov-custom-black:hover{
+    color:#0C0D0D;
+  }
+  
+  .btn-hov-mist:hover{
+    background:#B7B9A8;
+  }
+  .btn-hov-sand:hover{
+    background:#D1B5A3;
+  }
+  .btn-hov-orange:hover{
+    background:#E36858;
+  }
+  .btn-hov-custom-black:hover{
+    background:#0C0D0D;
+  }
+  
+  .accordion-button:not(.collapsed){
+    background-color: #E36858;
+  }
+  
+  .accordion-button.collapsed{
+    background-color: #B7B9A8;
+  }
+  
+  .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    color: #E36858;
+    background-color:#0C0D0D;
+  }
+  
+  .nav-link{
+    color: #E36858;
+  }
+  
+  .dropdown-menu{
+    --bs-dropdown-bg:#0C0D0D;
+    --bs-dropdown-link-color:#E36858;
+    --bs-dropdown-link-hover-color:#E36858;
+    --bs-dropdown-link-hover-bg:#B7B9A8;
+  }
+  
+  .form-control:focus{
+    color: #0C0D0D;
+    background-color: #B7B9A8;
+  }
+  
+  footer{
+    position: fixed;
+    height: 200px;
+    bottom: 0;
+    width:100%;
+  }
+  
+  
+  /* a{
+      text-decoration: none;
+      color: black;
+  }
+  
+  .nav{
+    display: flex;
+    height:70px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  #banner{
+    top:0px; 
+    left:0px; 
+    width:100%; 
+    height:100px; 
+    position:absolute;
+    background-color: #D1B5A3;
+    align-items: center;
+  }
+  
+  #content{
+    top:100px; 
+    left:0px; 
+    width:100%; 
+    height:750px; 
+    position:absolute;
+    background-color: #E36858;
+  }
+  
+  #footer{
+    top:800px; 
+    left:0px; 
+    width:100%; 
+    height:200px; 
+    position:absolute;
+    background-color: #0C0D0D;
+  } */
+  
+  ////////////form css//////////////////
+  /* ol{
+      list-style: none;
+      margin: 0;
+      padding :0;
+    }
+    
+    ol li{
+      clear: both;
+      margin: 0 0 10px 0;
+      padding: 0;
+    }
+    
+    label{
+      float: left;
+      width: 150px;
+    }
+    
+    input{ border: 1px solid #333; }
+    
+    input:focus{ background-color: #ffe; }
+    
+    .simpleColorContainer, .simpleColorDisplay{
+      float: left;
+    } */
+  
+  //////////trail/////////////////////////
+  /* p{
+    color: purple;
+  }
+  
+  section p{
+    background: black;
+    color: white;
+  } */
+  
+  /* button:hover{
+    background:rgba(0,0,0,0.2);
+  }
+  
+  section a{
+    background: yellow;
+    color: cyan;
+  }
+  section a{
+    background: green;
+    color: cyan;
+  }
+  
+  h1+p{
+    background: teal;
+    color: red;
+  } */
+  
+  /* h1~p{
+    color: white;
+  } */
+  
+  /* p[class="random"]{
+    color: green;
+  } */
+  /* p[class$="d"]{
+    color: green;
+  } */
+  /* p[class~="gold"]{
+    color: green;
+  } */
+  /* p[class^="g"]{
+    color: green;
+  } */

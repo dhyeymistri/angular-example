@@ -1,0 +1,198 @@
+<div class="row" style="width: 100%;">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+          type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Course</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+          type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Course Category</button>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+          aria-expanded="false">User</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Faculty</a></li>
+          <li><a class="dropdown-item" href="#">Trainee</a></li>
+        </ul>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="assessment-tab" data-bs-toggle="tab" data-bs-target="#assessment-tab-pane"
+          type="button" role="tab" aria-controls="assessment-tab-pane" aria-selected="false">Assessment</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="score-tab" data-bs-toggle="tab" data-bs-target="#score-tab-pane"
+          type="button" role="tab" aria-controls="score-tab-pane" aria-selected="false">Assessment Score</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="report-tab" data-bs-toggle="tab" data-bs-target="#report-tab-pane"
+          type="button" role="tab" aria-controls="report-tab-pane" aria-selected="false">Report</button>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+        tabindex="0">
+        <div class="row">
+          <ul class="nav nav-tabs" id="courseTabContent" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="view-user" data-bs-toggle="tab" data-bs-target="#view-user-pane"
+                type="button" role="tab" aria-controls="view-user-pane" aria-selected="true">View User</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="add-user" data-bs-toggle="tab" data-bs-target="#add-user-pane"
+                type="button" role="tab" aria-controls="add-user-pane" aria-selected="false">Add User</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="update-user" data-bs-toggle="tab" data-bs-target="#update-user-pane"
+                type="button" role="tab" aria-controls="update-user-pane" aria-selected="false">Update User</button>
+            </li>
+          </ul>
+        </div>
+        <div class="tab-content" id="courseTabContent">
+          <div class="tab-pane fade show active" id="view-user-pane" role="tabpanel" aria-labelledby="view-user"
+            tabindex="0">
+            <div class="row pt-1 pb-1">
+              <div class="col-1"><h4>Sr.no.</h4></div>
+              <div class="col-8"><h4>Name</h4></div>
+              <div class="col-3"><h4>Action</h4></div>
+            </div>
+            <div class="row pt-1 pb-1">
+              <div class="col-1">1</div>
+              <div class="col-8">Dhyey</div>
+              <div class="col-3"><button class="btn bg-custom-black tx-orange btn-hov-mist">Delete</button></div>
+            </div>
+            <div class="row pt-1 pb-1">
+              <div class="col-1">1</div>
+              <div class="col-8">Dhyey</div>
+              <div class="col-3"><button class="btn bg-custom-black tx-orange btn-hov-mist">Delete</button></div>
+            </div>
+            <div class="row pt-1 pb-1">
+              <div class="col-1">1</div>
+              <div class="col-8">Dhyey</div>
+              <div class="col-3"><button class="btn bg-custom-black tx-orange btn-hov-mist">Delete</button></div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="add-user-pane" role="tabpanel" aria-labelledby="add-user" tabindex="0">
+            <form>
+              <div class="col-6">
+                <div class="input-group my-2">
+                  <span class="input-group-text bg-mist">First and last name</span>
+                  <input type="text" aria-label="First name" class="form-control bg-mist tx-custom-black" required>
+                  <input type="text" aria-label="Last name" class="form-control bg-mist tx-custom-black"required>
+                </div>
+                <div class="input-group mb-2">
+                  <label class="input-group-text bg-mist" for="inputGroupSelect01">Select new user type</label>
+                  <select class="form-select bg-mist tx-custom-black" id="inputGroupSelect01">
+                    <option selected>Choose...</option>
+                    <option value="1">Faculty</option>
+                    <option value="2">Trainee</option>
+                  </select>
+                </div>
+                <div class="input-group mb-2">
+                  <label class="input-group-text bg-mist" for="inputGroupSelect02">Select new user course</label>
+                  <select class="form-select bg-mist tx-custom-black" id="inputGroupSelect02">
+                    <option selected>Choose...</option>
+                    <option value="1">Python</option>
+                    <option value="2">Angular</option>
+                    <option value="3">Ruby on Rails</option>
+                    <option value="4">NodeJS</option>
+                  </select>
+                </div>
+                <button class="btn bg-custom-black tx-orange btn-hov-mist" type="submit">Add new User</button>
+              </div>
+            </form>
+          </div>
+          <div class="tab-pane fade" id="update-user-pane" role="tabpanel" aria-labelledby="update-user" tabindex="0">
+            <div class="row pt-1 pb-1">
+              <div class="col-1"><h4>Sr.no.</h4></div>
+              <div class="col-8"><h4>Name</h4></div>
+              <div class="col-3"><h4>Action</h4></div>
+            </div>
+            <div class="row pt-1 pb-1">
+              <div class="col-1">1</div>
+              <div class="col-8">Dhyey</div>
+              <div class="col-3"><button class="btn bg-custom-black tx-orange btn-hov-mist">Update</button></div>
+            </div>
+            <div class="row pt-1 pb-1">
+              <div class="col-1">1</div>
+              <div class="col-8">Dhyey</div>
+              <div class="col-3"><button class="btn bg-custom-black tx-orange btn-hov-mist">Update</button></div>
+            </div>
+            <div class="row pt-1 pb-1">
+              <div class="col-1">1</div>
+              <div class="col-8">Dhyey</div>
+              <div class="col-3"><button class="btn bg-custom-black tx-orange btn-hov-mist">Update</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...
+      </div>
+      <div class="tab-pane fade" id="assessment-tab-pane" role="tabpanel" aria-labelledby="assessment-tab" tabindex="0">
+        <div class="row pt-1 pb-1">
+          <div class="col-1"><h4>Sr.no.</h4></div>
+          <div class="col-8"><h4>Name</h4></div>
+          <div class="col-3"><h4>Status</h4></div>
+        </div>
+        <div class="row pt-1 pb-1">
+          <div class="col-1">1</div>
+          <div class="col-8">Dhyey</div>
+          <div class="col-3">Pending</div>
+        </div>
+        <div class="row pt-1 pb-1">
+          <div class="col-1">1</div>
+          <div class="col-8">Dhyey</div>
+          <div class="col-3">Submitted</div>
+        </div>
+        <div class="row pt-1 pb-1">
+          <div class="col-1">1</div>
+          <div class="col-8">Dhyey</div>
+          <div class="col-3">Pending</div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="score-tab-pane" role="tabpanel" aria-labelledby="score-tab" tabindex="0">
+        <div class="row pt-1 pb-1">
+          <div class="col-1"><h4>Sr.no.</h4></div>
+          <div class="col-8"><h4>Name</h4></div>
+          <div class="col-3"><h4>Score</h4></div>
+        </div>
+        <div class="row pt-1 pb-1">
+          <div class="col-1">1</div>
+          <div class="col-8">Dhyey</div>
+          <div class="col-3">20</div>
+        </div>
+        <div class="row pt-1 pb-1">
+          <div class="col-1">1</div>
+          <div class="col-8">Dhyey</div>
+          <div class="col-3">30</div>
+        </div>
+        <div class="row pt-1 pb-1">
+          <div class="col-1">1</div>
+          <div class="col-8">Dhyey</div>
+          <div class="col-3">40</div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="report-tab-pane" role="tabpanel" aria-labelledby="report-tab" tabindex="0">
+        <div class="row pt-1 pb-1">
+          <div class="col-1"><h4>Sr.no.</h4></div>
+          <div class="col-8"><h4>Name</h4></div>
+          <div class="col-3"><h4>Report</h4></div>
+        </div>
+        <div class="row pt-1 pb-1">
+          <div class="col-1">1</div>
+          <div class="col-8">Dhyey</div>
+          <div class="col-3"><button class="btn bg-custom-black tx-orange btn-hov-mist">Click here to check report</button></div>
+        </div>
+        <div class="row pt-1 pb-1">
+          <div class="col-1">1</div>
+          <div class="col-8">Dhyey</div>
+          <div class="col-3"><button class="btn bg-custom-black tx-orange btn-hov-mist">Click here to check report</button></div>
+        </div>
+        <div class="row pt-1 pb-1">
+          <div class="col-1">1</div>
+          <div class="col-8">Dhyey</div>
+          <div class="col-3"><button class="btn bg-custom-black tx-orange btn-hov-mist">Click here to check report</button></div>
+        </div>
+      </div>
+    </div>
+  </div>

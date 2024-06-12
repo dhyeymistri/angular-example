@@ -1,0 +1,118 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-custom-black">
+    <a class="navbar-brand" href="index.html" style="padding-left: 10px;">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="awesomeco_logo" width="350" height="50">
+        <polyline id="line" points="0,40 30,0 60,40 350,40" style="fill:none;stroke:#D1B5A3;stroke-width:2"></polyline>
+        <text id="Assessments" fill="##D1B5A3]" font-family="Arial" font-size="40" font-style="italic" font-weight="normal">
+            <tspan x="60" y="36" fill="#D1B5A3">AssessmentsCo</tspan>
+        </text>
+        <rect id="square" x="20" y="20" height="20" width="20" style="fill:#D1B5A3"></rect><path id="Triangle" d="M20,40 L30,20 L40,40 Z M20,40" fill="#0C0D0D"></path>
+    </svg>
+    </a>
+    <button class="navbar-toggler bg-sand" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link tx-sand tx-hov-orange" [routerLink]="['home']">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link tx-sand tx-hov-orange" [routerLink]="['aboutus']">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link tx-sand tx-hov-orange" [routerLink]="['assessments']">Assessments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link tx-sand tx-hov-orange" [routerLink]="['admin']">Admin</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link tx-sand tx-hov-orange" [routerLink]="['contactus']">Contact Us</a>
+        </li>
+        <li class="mx-2">
+          <!-- Button trigger modal -->
+          <button type="button" class="btn bg-orange btn-hov-mist" data-bs-toggle="modal" data-bs-target="#loginModal">
+            Login
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content bg-sand">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="loginModalLabel">Login</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control bg-mist tx-custom-black" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control bg-mist tx-custom-black" id="exampleInputPassword1" required>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="submit" class="btn bg-custom-black tx-orange btn-hov-mist">Login</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="mx-2">
+          <!-- Button trigger modal -->
+          <button type="button" class="btn bg-orange btn-hov-mist" data-bs-toggle="modal" data-bs-target="#registerModal">
+            Register
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content bg-sand">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="registerModalLabel">Register</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <label for="registerInputFirstName" class="form-label">First Name</label>
+                      <input type="text" class="form-control bg-mist tx-custom-black" id="registerInputFirstName" aria-describedby="firstNameHelp" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="registerInputLastName" class="form-label">Last Name</label>
+                      <input type="text" class="form-control bg-mist tx-custom-black" id="registerInputLastName" aria-describedby="lastNameHelp" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="registerInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control bg-mist tx-custom-black" id="registerInputEmail1" aria-describedby="emailHelp" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="registerdob" class="form-label">Date of Birth</label>
+                      <input type="date" class="form-control bg-mist tx-custom-black" id="registerdob" aria-describedby="dobHelp" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="registerInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control bg-mist tx-custom-black" id="registerInputPassword1" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="registerAgainPassword1" class="form-label">Confirm Password</label>
+                      <input type="password" class="form-control bg-mist tx-custom-black" id="registerAgainPassword1" required>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="submit" class="btn bg-custom-black tx-orange btn-hov-mist" onclick="checkDOB()">Register</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>

@@ -1,0 +1,33 @@
+<div class="row" style="width: 100%;">
+    <div class="row">
+      <div class="row" id="page-1">
+        <div class="col-2"></div>
+        <div class="col-8">
+          <div class="row row-cols-3">
+            <div class="col d-flex justify-content-center my-1" *ngFor="let a of arrAssessments">
+              <div class="card bg-custom-black">
+                <div class="card-body tx-orange">
+                  <h5 class="card-title">{{a.assessmentName}} assessment</h5>
+                  <p class="card-text">This assessment will get you to master {{a.assessmentName}}</p>
+                  <div class="d-flex justify-content-between"><a href="#" class="btn bg-mist">View Details</a>
+                    <a href="#" class="btn bg-mist">Buy Now</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-2"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <li class="page-item"><a class="page-link bg-custom-black tx-orange btn-hov-mist" href="#">Previous</a></li>
+        <li class="page-item"><a class="page-link bg-custom-black tx-orange btn-hov-mist" href="#">1</a></li>
+        <li class="page-item"><a class="page-link bg-custom-black tx-orange btn-hov-mist" href="#">2</a></li>
+        <li class="page-item"><a class="page-link bg-custom-black tx-orange btn-hov-mist" href="#">3</a></li>
+        <li class="page-item"><a class="page-link bg-custom-black tx-orange btn-hov-mist" href="#">Next</a></li>
+      </ul>
+    </nav>
+  </div>

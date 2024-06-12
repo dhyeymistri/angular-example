@@ -1,0 +1,12 @@
+<div>
+    <!-- <div [ngClass]="{styled: false}">Never styled</div>
+    <div [ngClass]="{styled: true}">Always styled</div>
+
+    <div [ngClass]="{styled: isStyled}">This style is {{isStyled}}</div> -->
+
+    <div [ngClass]="classObj">
+        Using object variable style {{classObj.styled ? "ON" : "OFF"}}
+    </div>
+    <button (click)="toggleStyle()">Toggle</button>
+</div>
+
