@@ -51,78 +51,13 @@
         <div class="tab-content" id="courseTabContent">
           <div class="tab-pane fade show active" id="view-user-pane" role="tabpanel" aria-labelledby="view-user"
             tabindex="0">
-            <div class="row pt-1 pb-1">
-              <div class="col-1"><h4>Sr.no.</h4></div>
-              <div class="col-8"><h4>Name</h4></div>
-              <div class="col-3"><h4>Action</h4></div>
-            </div>
-            <div class="row pt-1 pb-1">
-              <div class="col-1">1</div>
-              <div class="col-8">Dhyey</div>
-              <div class="col-3"><button class="btn bg-custom-black tx-orange btn-hov-mist">Delete</button></div>
-            </div>
-            <div class="row pt-1 pb-1">
-              <div class="col-1">1</div>
-              <div class="col-8">Dhyey</div>
-              <div class="col-3"><button class="btn bg-custom-black tx-orange btn-hov-mist">Delete</button></div>
-            </div>
-            <div class="row pt-1 pb-1">
-              <div class="col-1">1</div>
-              <div class="col-8">Dhyey</div>
-              <div class="col-3"><button class="btn bg-custom-black tx-orange btn-hov-mist">Delete</button></div>
-            </div>
+          <app-view-user></app-view-user>
           </div>
           <div class="tab-pane fade" id="add-user-pane" role="tabpanel" aria-labelledby="add-user" tabindex="0">
-            <form>
-              <div class="col-6">
-                <div class="input-group my-2">
-                  <span class="input-group-text bg-mist">First and last name</span>
-                  <input type="text" aria-label="First name" class="form-control bg-mist tx-custom-black" required>
-                  <input type="text" aria-label="Last name" class="form-control bg-mist tx-custom-black"required>
-                </div>
-                <div class="input-group mb-2">
-                  <label class="input-group-text bg-mist" for="inputGroupSelect01">Select new user type</label>
-                  <select class="form-select bg-mist tx-custom-black" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">Faculty</option>
-                    <option value="2">Trainee</option>
-                  </select>
-                </div>
-                <div class="input-group mb-2">
-                  <label class="input-group-text bg-mist" for="inputGroupSelect02">Select new user course</label>
-                  <select class="form-select bg-mist tx-custom-black" id="inputGroupSelect02">
-                    <option selected>Choose...</option>
-                    <option value="1">Python</option>
-                    <option value="2">Angular</option>
-                    <option value="3">Ruby on Rails</option>
-                    <option value="4">NodeJS</option>
-                  </select>
-                </div>
-                <button class="btn bg-custom-black tx-orange btn-hov-mist" type="submit">Add new User</button>
-              </div>
-            </form>
+            <app-add-user></app-add-user>
           </div>
           <div class="tab-pane fade" id="update-user-pane" role="tabpanel" aria-labelledby="update-user" tabindex="0">
-            <div class="row pt-1 pb-1">
-              <div class="col-1"><h4>Sr.no.</h4></div>
-              <div class="col-8"><h4>Name</h4></div>
-              <div class="col-3"><h4>Action</h4></div>
-            </div>
-            <div class="row pt-1 pb-1">
-              <div class="col-1">1</div>
-              <div class="col-8">Dhyey</div>
-              <div class="col-3"><button class="btn bg-custom-black tx-orange btn-hov-mist">Update</button></div>
-            </div>
-            <div class="row pt-1 pb-1">
-              <div class="col-1">1</div>
-              <div class="col-8">Dhyey</div>
-              <div class="col-3"><button class="btn bg-custom-black tx-orange btn-hov-mist">Update</button></div>
-            </div>
-            <div class="row pt-1 pb-1">
-              <div class="col-1">1</div>
-              <div class="col-8">Dhyey</div>
-              <div class="col-3"><button class="btn bg-custom-black tx-orange btn-hov-mist">Update</button></div>
-            </div>
+            <app-update-user></app-update-user>
           </div>
         </div>
       </div>
@@ -151,26 +86,7 @@
         </div>
       </div>
       <div class="tab-pane fade" id="score-tab-pane" role="tabpanel" aria-labelledby="score-tab" tabindex="0">
-        <div class="row pt-1 pb-1">
-          <div class="col-1"><h4>Sr.no.</h4></div>
-          <div class="col-8"><h4>Name</h4></div>
-          <div class="col-3"><h4>Score</h4></div>
-        </div>
-        <div class="row pt-1 pb-1">
-          <div class="col-1">1</div>
-          <div class="col-8">Dhyey</div>
-          <div class="col-3">20</div>
-        </div>
-        <div class="row pt-1 pb-1">
-          <div class="col-1">1</div>
-          <div class="col-8">Dhyey</div>
-          <div class="col-3">30</div>
-        </div>
-        <div class="row pt-1 pb-1">
-          <div class="col-1">1</div>
-          <div class="col-8">Dhyey</div>
-          <div class="col-3">40</div>
-        </div>
+        <app-assessment-scores></app-assessment-scores>
       </div>
       <div class="tab-pane fade" id="report-tab-pane" role="tabpanel" aria-labelledby="report-tab" tabindex="0">
         <div class="row pt-1 pb-1">
@@ -196,3 +112,4 @@
       </div>
     </div>
   </div>
+  

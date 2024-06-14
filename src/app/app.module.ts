@@ -13,6 +13,11 @@ import { AdminComponent } from './components/admin/admin.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { NgSwitchComponent } from './components/ng-switch/ng-switch.component';
 import { NgClassComponent } from './components/ng-class/ng-class.component';
+import { AddUserComponent } from './components/add-user/add-user.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ViewUserComponent } from './components/view-user/view-user.component';
+import { UpdateUserComponent } from './components/update-user/update-user.component';
+import { AssessmentScoresComponent } from './components/assessment-scores/assessment-scores.component';
 
 @NgModule({
   declarations: [
@@ -26,10 +31,16 @@ import { NgClassComponent } from './components/ng-class/ng-class.component';
     AdminComponent,
     ContactUsComponent,
     NgSwitchComponent,
-    NgClassComponent
+    NgClassComponent,
+    AddUserComponent,
+    ViewUserComponent,
+    UpdateUserComponent,
+    AssessmentScoresComponent
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],

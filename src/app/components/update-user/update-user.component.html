@@ -1,0 +1,10 @@
+<div class="row pt-1 pb-1">
+    <div class="col-1"><h4>Sr.no.</h4></div>
+    <div class="col-8"><h4>Name</h4></div>
+    <div class="col-3"><h4>Action</h4></div>
+  </div>
+  <div class="row pt-1 pb-1" *ngFor="let user of arrUsers">
+    <div class="col-1">{{user.userID}}</div>
+    <div class="col-8">{{user.firstName}}</div>
+    <div class="col-3"><button class="btn bg-custom-black tx-orange btn-hov-mist">Update</button></div>
+  </div>

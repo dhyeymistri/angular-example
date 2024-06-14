@@ -1,0 +1,10 @@
+<div class="row pt-1 pb-1">
+    <div class="col-1"><h4>Sr.no.</h4></div>
+    <div class="col-8"><h4>Trainee ID</h4></div>
+    <div class="col-3"><h4>Score</h4></div>
+  </div>
+  <div class="row pt-1 pb-1" *ngFor="let a of assessmentScores">
+    <div class="col-1">{{a.assessmentID}}</div>
+    <div class="col-8">{{a.traineeID}}</div>
+    <div class="col-3">{{a.score}}</div>
+  </div>

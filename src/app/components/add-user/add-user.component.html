@@ -1,0 +1,51 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)">
+    <div class="col-6">
+      <div class="input-group m-2">
+        <span class="input-group-text bg-mist">First and last name</span>
+        <input type="text" aria-label="First name" class="form-control bg-mist tx-custom-black" formControlName="firstName" required>
+        <input type="text" aria-label="Last name" class="form-control bg-mist tx-custom-black" formControlName="lastName" required>
+      </div>
+      <div class="my-2">
+        <label class="mx-2">Email<input type="text" aria-label="address" class="form-control bg-mist tx-custom-black" formControlName="email" required></label>
+        <label class="mx-2">Mobile<input type="text" aria-label="address" class="form-control bg-mist tx-custom-black" formControlName="mobile" required></label>
+      </div>
+      <div class="m-2">
+        <label>Date of birth<input type="date" aria-label="address" class="form-control bg-mist tx-custom-black" formControlName="dob" required></label>
+      </div>
+      <div class="m-2">
+        <label>Role<input type="text" aria-label="address" class="form-control bg-mist tx-custom-black" formControlName="role" required></label>
+      </div>
+      <div class="m-2">
+        <label>Password<input type="text" aria-label="address" class="form-control bg-mist tx-custom-black" formControlName="password" required></label>
+      </div>
+      <div class="my-2">
+        <label class="mx-2">House no.:<input type="text" aria-label="address" class="form-control bg-mist tx-custom-black" formControlName="houseNo" required></label>
+        <label class="mx-2">Street<input type="text" aria-label="address" class="form-control bg-mist tx-custom-black" formControlName="street" required></label>
+        <label class="mx-2">Area<input type="text" aria-label="address" class="form-control bg-mist tx-custom-black" formControlName="area" required></label>
+      </div>
+      <div class="my-2">
+        <label class="mx-2">State<input type="text" aria-label="address" class="form-control bg-mist tx-custom-black" formControlName="state" required></label>
+        <label class="mx-2">Country<input type="text" aria-label="address" class="form-control bg-mist tx-custom-black" formControlName="country" required></label>
+        <label class="mx-2">Pincode<input type="text" aria-label="address" class="form-control bg-mist tx-custom-black" formControlName="pincode" required></label>
+      </div>
+      <!-- <div class="input-group mb-2">
+        <label class="input-group-text bg-mist" for="inputGroupSelect01">Select new user type</label>
+        <select class="form-select bg-mist tx-custom-black" id="inputGroupSelect01" formControlName="uType">
+          <option selected>Choose...</option>
+          <option value="1">Faculty</option>
+          <option value="2">Trainee</option>
+        </select>
+      </div>
+      <div class="input-group mb-2">
+        <label class="input-group-text bg-mist" for="inputGroupSelect02">Select new user course</label>
+        <select class="form-select bg-mist tx-custom-black" id="inputGroupSelect02" formControlName="cType">
+          <option selected>Choose...</option>
+          <option value="1">Python</option>
+          <option value="2">Angular</option>
+          <option value="3">Ruby on Rails</option>
+          <option value="4">NodeJS</option>
+        </select> -->
+      <!-- </div> -->
+      <button class="btn bg-custom-black tx-orange btn-hov-mist m-2" type="submit">Add new User</button>
+    </div>
+  </form>
