@@ -1,0 +1,25 @@
+<div class="modal-dialog">
+    <div class="modal-content bg-sand">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="loginModalLabel">Login</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" formControlName="email" class="form-control bg-mist tx-custom-black" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" formControlName="password" class="form-control bg-mist tx-custom-black" id="exampleInputPassword1" required>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn bg-custom-black tx-orange btn-hov-mist">Login</button>
+          </div>
+
+          <div *ngIf="invalid">Invalid email/password</div>
+        </form>
+      </div>
+    </div>
+  </div>

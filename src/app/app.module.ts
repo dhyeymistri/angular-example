@@ -18,6 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ViewUserComponent } from './components/view-user/view-user.component';
 import { UpdateUserComponent } from './components/update-user/update-user.component';
 import { AssessmentScoresComponent } from './components/assessment-scores/assessment-scores.component';
+import { LoginModalComponent } from './components/login-modal/login-modal.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { AssessmentScoresComponent } from './components/assessment-scores/assess
     AddUserComponent,
     ViewUserComponent,
     UpdateUserComponent,
-    AssessmentScoresComponent
+    AssessmentScoresComponent,
+    LoginModalComponent
   ],
   imports: [
     BrowserModule,

@@ -10,7 +10,7 @@ export class UserService {
   constructor() {
     this.arrUsers = [
       new User(1, "john", "hugh", "john@gmail.com", "3342354897", new Date("2014-05-22"), "user","john@123", new Address(1, 7, "7th main", "rajajinagar", "Karnataka", "india", "234234")),
-      new User(2, "jane", "fi", "jane@gmail.com", "3342254897", new Date("2002-05-22"), "user","jane@123", new Address(1, 7, "7th main", "malleshwaram", "Karnataka", "india", "555555")),
+      new User(2, "jane", "fi", "jane@gmail.com", "3342254897", new Date("2002-05-22"), "admin","jane@123", new Address(1, 7, "7th main", "malleshwaram", "Karnataka", "india", "555555")),
     ]
   }
 
@@ -30,5 +30,35 @@ export class UserService {
   adUser(v:any){
     this.arrUsers.push(new User(this.arrUsers.length+1, v.firstName, v.lastName, v.email, v.mobile, v.dob, v.role, v.password, new Address(this.arrUsers.length+1, v.houseNo, v.street, v.area, v.state, v.country, v.pincode)));
     console.log(this.arrUsers);
+  }
+
+  updateUser(v:any){
+    console.log(v.selectName);
+    for(var i = 0; i < this.arrUsers.length; i++){
+      if(v.selectName == this.arrUsers[i].userID){
+        this.arrUsers[i]=v;
+      }
+    }
+
+    this.arrUsers.forEach(r => {
+      console.log(r);
+    });
+  }
+
+  checkLogin(log: any):boolean{
+    for(var i = 0; i < this.arrUsers.length; i++){
+      if(log.email == this.arrUsers[i].email){
+        if(log.password == this.arrUsers[i].password) {
+          console.log("password correct");
+          localStorage.setItem("role", this.arrUsers[i].role);
+          return false;
+        } else {
+          console.log("incorrect password");
+          return true;
+        }
+      }
+    }
+    console.log("email not found");
+    return true;
   }
 }
