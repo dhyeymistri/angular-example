@@ -1,0 +1,50 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "firstName": "John",
+      "lastName": "Hugh",
+      "email": "john@gmail.com",
+      "mobile": "3242341567",
+      "role": "user",
+      "password": "john@123",
+      "address": {
+        "userID": "1",
+        "houseNo": 3,
+        "street": "7th cross",
+        "area": "malleswaram",
+        "state": "karnataka",
+        "country": "india",
+        "pincode": "333333"
+      }
+    },
+    {
+      "id": "2",
+      "firstName": "Jane",
+      "lastName": "Fever",
+      "email": "jane@gmail.com",
+      "mobile": "3283923041",
+      "role": "admin",
+      "password": "jane@123",
+      "address": {
+        "userID": "2",
+        "houseNo": 3,
+        "street": "8th cross",
+        "area": "malleswaram",
+        "state": "karnataka",
+        "country": "india",
+        "pincode": "333335"
+      }
+    }
+  ],
+  "course_categories": [
+    {
+      "id": "1",
+      "category": "finance"
+    },
+    {
+      "id": "2",
+      "category": "management"
+    }
+  ]
+}

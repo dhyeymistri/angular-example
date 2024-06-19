@@ -1,6 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatSelectModule} from '@angular/material/select';
+import {MatIconModule} from '@angular/material/icon';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContentComponent } from './components/content/content.component';
@@ -19,6 +27,8 @@ import { ViewUserComponent } from './components/view-user/view-user.component';
 import { UpdateUserComponent } from './components/update-user/update-user.component';
 import { AssessmentScoresComponent } from './components/assessment-scores/assessment-scores.component';
 import { LoginModalComponent } from './components/login-modal/login-modal.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { AddAssessmentComponent } from './components/add-assessment/add-assessment.component';
 
 @NgModule({
   declarations: [
@@ -37,15 +47,25 @@ import { LoginModalComponent } from './components/login-modal/login-modal.compon
     ViewUserComponent,
     UpdateUserComponent,
     AssessmentScoresComponent,
-    LoginModalComponent
+    LoginModalComponent,
+    AddAssessmentComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatButtonModule,
+    MatExpansionModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatStepperModule,
+    MatIconModule
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

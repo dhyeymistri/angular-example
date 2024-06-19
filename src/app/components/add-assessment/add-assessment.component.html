@@ -1,0 +1,110 @@
+<mat-stepper headerPosition="bottom" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup" (ngSubmit)="saveFirstStepData(firstFormGroup)">
+        <ng-template matStepLabel>Add assessment details</ng-template>
+        <mat-form-field appearance="fill" style="margin: 5px;">
+            <mat-label>Assessment id</mat-label>
+          <input matInput placeholder="Assessment ID" formControlName="assessmentID" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill" style="margin: 5px;">
+            <mat-label>Assessment No.</mat-label>
+          <input matInput placeholder="Assessment No." formControlName="assessmentNo" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill" style="margin: 5px;">
+            <mat-label>Assessment Date</mat-label>
+          <input matInput type="date" placeholder="Date" formControlName="assessmentDate" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill" style="margin: 5px;">
+            <mat-label>Faculty ID</mat-label>
+          <input matInput placeholder="Faculty ID" formControlName="facultyID" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext type="submit">Save</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+    </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="questionForm" class="basic-container" (ngSubmit)="saveSecondStepData(questionForm.value)">
+        <ng-template matStepLabel>Add/Remove Questions</ng-template>
+        <div formArrayName="questions">
+            <div class="row" *ngFor="let product of questionsArr().controls; let i = index" [formGroupName]="i">
+                <div>
+                <mat-form-field style="margin: 5px;">
+                    <textarea matInput formControlName="qText" placeholder="Question text"></textarea>
+                </mat-form-field>
+            </div>
+            <mat-form-field appearance="fill" style="margin: 5px;padding-bottom: -24px;">
+                <mat-label>Question type</mat-label>
+                <mat-select formControlName="qType" [(value)]="selectedQ[i]" (selectionChange)="onSelectionChange(selectedQ[i],i)">
+                    <mat-option *ngFor="let q of questionLabels" [value]="q">{{q}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <div *ngIf="check[i]==1">
+              Enter option 1<input matInput style="margin: 2px;" type="text" required><br>
+              Enter option 2<input matInput style="margin: 2px;" type="text" required><br>
+              Enter option 3<input matInput style="margin: 2px;" type="text" required><br>
+              Enter option 4<input matInput style="margin: 2px;" type="text" required>
+            </div>
+            <div *ngIf="check[i]==2">
+              This will be a True/False question
+            </div>
+                <mat-form-field class="col-4" style="margin: 5px;">
+                    <input matInput formControlName="answer" placeholder="Answer">
+                </mat-form-field>
+                <div class="col-3">
+                <button class="float-left" mat-icon-button color="primary" aria-label="Remove/clear" (click)="removeOrClearItinery(i)" matTooltip="Remove">
+                    <mat-icon>highlight-off</mat-icon>
+                </button>
+                <button class="float-left" mat-icon-button color="primary" aria-label="Add" (click)="addItineryFormGroup()" matTooltip="Add">
+                    <mat-icon>add_circle_outline</mat-icon>
+                </button>
+                <div>
+                    <button mat-button matStepperNext type="submit">Save</button>
+                  </div>
+            </div>
+            </div>
+        </div>
+        </form>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+    </mat-step>
+    
+    
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      You are now done.
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+<hr/>
+<!-- <div *ngFor="let prod of arrProducts">
+  <mat-accordion>
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title></mat-panel-title>
+        <mat-panel-description>
+            <div style="font-size: larger;font-weight: bolder;">Itinery for product: {{prod.pName}}</div>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>Find the itinery below</p>
+    </mat-expansion-panel>
+    <mat-expansion-panel *ngFor="let itinInd of prod.itinery;let i = index" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+      <mat-expansion-panel-header>
+        <mat-panel-title>Day: {{itinInd.day}}</mat-panel-title>
+        <mat-panel-description>
+          <div *ngFor="let act of itinInd.activities">
+            Activity: {{act.actName}}
+            <br/>
+          </div>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      
+    </mat-expansion-panel>
+  </mat-accordion>
+  </div> -->
