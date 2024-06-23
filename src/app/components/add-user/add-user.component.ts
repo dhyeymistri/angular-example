@@ -11,6 +11,7 @@ import { Address } from '../../models/address';
 })
 export class AddUserComponent {
   myForm: FormGroup
+  arrUsers:User[]=[]
 
   constructor(fb: FormBuilder, private userService: UserService){
     this.myForm = fb.group({
@@ -33,11 +34,19 @@ export class AddUserComponent {
   // get f(){return this.myForm.controls;}
 
   onSubmit(val:any):void{
-    // var tmpUser = new User(1,val['firstName'],val['lastName'], val['email'],val['mobile'],val['dob'], val['role'],val['password'], new Address(0,val['houseNo'],val['street'],val['area'],val['state'],val['country'],val['pincode']));
     if(this.myForm.valid){
-      this.userService.adUser(val);
-      console.log(val);
+      this.userService.getUsers().subscribe(data=>{
+        this.arrUsers = data
+        console.log((this.arrUsers.length+ 1).toString())
+        var tmpUser = new User((this.arrUsers.length+ 1).toString(),val['firstName'],val['lastName'], val['email'],val['mobile'],val['dob'], val['role'],val['password'], new Address(0,val['houseNo'],val['street'],val['area'],val['state'],val['country'],val['pincode']));
+        this.userService.adUser(tmpUser).subscribe(data=>{
+          console.log("added: "+data);
+        })
+      })
+      // this.userService.adUser(val);
     } else console.log("Form is invalid");
+
+    
   }
 
 }

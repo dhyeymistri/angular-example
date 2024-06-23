@@ -36,15 +36,15 @@
           <ul class="nav nav-tabs" id="courseTabContent" role="tablist">
             <li class="nav-item" role="presentation">
               <button class="nav-link active" id="view-user" data-bs-toggle="tab" data-bs-target="#view-user-pane"
-                type="button" role="tab" aria-controls="view-user-pane" aria-selected="true">View Assessment</button>
+                type="button" role="tab" aria-controls="view-user-pane" aria-selected="true">View User</button>
             </li>
             <li class="nav-item" role="presentation">
               <button class="nav-link" id="add-user" data-bs-toggle="tab" data-bs-target="#add-user-pane"
-                type="button" role="tab" aria-controls="add-user-pane" aria-selected="false">Add Assessment</button>
+                type="button" role="tab" aria-controls="add-user-pane" aria-selected="false">Add User</button>
             </li>
             <li class="nav-item" role="presentation">
               <button class="nav-link" id="update-user" data-bs-toggle="tab" data-bs-target="#update-user-pane"
-                type="button" role="tab" aria-controls="update-user-pane" aria-selected="false">Update Assessment</button>
+                type="button" role="tab" aria-controls="update-user-pane" aria-selected="false">Update User</button>
             </li>
           </ul>
         </div>
@@ -54,8 +54,8 @@
           <app-view-user></app-view-user>
           </div>
           <div class="tab-pane fade" id="add-user-pane" role="tabpanel" aria-labelledby="add-user" tabindex="0">
-            <app-add-user></app-add-user>
-             <!-- <app-add-assessment></app-add-assessment> -->
+            <!-- <app-add-user></app-add-user> -->
+             <app-add-assessment></app-add-assessment>
           </div>
           <div class="tab-pane fade" id="update-user-pane" role="tabpanel" aria-labelledby="update-user" tabindex="0">
             <app-update-user></app-update-user>

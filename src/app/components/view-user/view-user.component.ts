@@ -11,6 +11,11 @@ import { UserService } from '../../services/user.service';
 export class ViewUserComponent {
   arrUsers: User[] = []
   constructor(private users:UserService){
-    this.arrUsers = users.getUsers();
+    // this.arrUsers = users.getUsers();
+    // console.log(users.getUsers());
+    this.users.getUsers().subscribe(data=>{
+      this.arrUsers = data
+      console.log(this.arrUsers)
+    })
   }
 }

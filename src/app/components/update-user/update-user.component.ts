@@ -16,12 +16,16 @@ import { formatDate } from '@angular/common';
 export class UpdateUserComponent {
   myForm: FormGroup
   user:User
-  users:User[]
-  idUpdated:number=0
+  users:User[]=[]
+  idUpdated:string=''
 
   constructor(fb: FormBuilder, private userService: UserService){
-    this.users = userService.getUsers();
-    this.user = new User(0,'','','','',new Date,'','',new Address(0,0,'','','','',''));
+    // this.users = userService.getUsers();
+    this.userService.getUsers().subscribe(data=>{
+      this.users = data
+      console.log(this.users)
+    })
+    this.user = new User('','','','','',new Date,'','',new Address(0,0,'','','','',''));
 
     this.myForm = fb.group({
       'selectName':['', Validators.required],
@@ -46,8 +50,12 @@ export class UpdateUserComponent {
   onSubmit(val:any):void{
     // var tmpUser = new User(1,val['firstName'],val['lastName'], val['email'],val['mobile'],val['dob'], val['role'],val['password'], new Address(0,val['houseNo'],val['street'],val['area'],val['state'],val['country'],val['pincode']));
     if(this.myForm.valid){
-      this.userService.updateUser(val);
-      console.log(val);
+      // this.userService.updateUser(val);
+      // console.log(val['selectedName']);
+      var tmpUser = new User(val['selectName'],val['firstName'],val['lastName'], val['email'],val['mobile'],val['dob'], val['role'],val['password'], new Address(0,val['houseNo'],val['street'],val['area'],val['state'],val['country'],val['pincode']));
+      this.userService.updateUser(tmpUser).subscribe(data=>{
+        console.log("updated: "+data);
+      })
     } else console.log("form is invalid");
   }
 
@@ -55,11 +63,11 @@ export class UpdateUserComponent {
     // console.log(e.target.value);
 
     var idObtained = e.target.value;
-    this.idUpdated = parseInt(idObtained.split(':')[1].trim());
-    // console.log(this.idUpdated);
+    this.idUpdated = idObtained.split(':')[1].trim();
+    console.log(this.idUpdated);
 
     for(var i = 0; i < this.users.length;i++){
-      if(this.idUpdated == this.users[i].userID)
+      if(this.idUpdated == this.users[i].id)
         this.user = this.users[i];
     }
     // var newDate = this.user.dob;

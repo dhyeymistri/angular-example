@@ -1,18 +1,17 @@
-import { AssessmentModel } from "./assessmentModel"
+import { Assessment } from "./assessments"
 
 export class Cart{
-    id: number
-    userID: number
-    assessmentArray: AssessmentModel[]
-    quantityArray:number[]
-    total: number
+    id:string
+    userID:string
+    assessments:Assessment[]
+    cartQuantity:number[]
+    cartTotal:number
 
-    constructor(id: number, userID:number, assArr:AssessmentModel[], quanArr:number[], t:number){
+    constructor(id:string, uid:string, ass:Assessment[],cartQ:number[],cartT:number){
         this.id = id
-        this.userID = userID
-        this.assessmentArray = assArr
-        this.quantityArray = quanArr
-        this.total = t
+        this.userID = uid
+        this.assessments = ass
+        this.cartQuantity = cartQ
+        this.cartTotal = cartT
     }
-
 }

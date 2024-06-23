@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Assessment } from '../../models/assessments';
 import { AssessmentService } from '../../services/assessment.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,14 +11,15 @@ import { AssessmentService } from '../../services/assessment.service';
 
 export class HomeComponent {
     arrAssessments:Assessment[]=[]
-    byIdAssessment: Assessment = new Assessment(0,"","",true)
-    constructor(private assessmentService:AssessmentService){
+    byIdAssessment: Assessment = new Assessment("0","","",true)
+    constructor(private assessmentService:AssessmentService, private router:Router){
         this.arrAssessments = this.assessmentService.getAssessments();
     }
 
-    displayDetails(id: number){
+    displayDetails(id: string){
         this.byIdAssessment = this.assessmentService.getAssessmentByID(id);
         console.log(this.byIdAssessment);
+        this.router.navigate(['viewassessmentdetails/'+id])
     }
 
     // assessmentName = "A-V18";

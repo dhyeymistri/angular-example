@@ -1,0 +1,12 @@
+<div class="row" *ngFor="let ass of arrAssessments; let i = index">
+    <div class="col">{{i+1}}</div>
+    <div class="col">{{ass.assessmentName}}</div>
+    <div class="col">{{cartQuantity[i]}}</div>
+    <div class="col"><button class="col" (click)="addQuantity(i)">Add quantity</button></div>
+    <div class="col"><button class="col" (click)="decreaseQuantity(i)">Decrease quantity</button></div>
+</div>
+
+<div class="row">
+    <button (click)="checkOut()">Checkout</button>
+    <div class="col">Total quantity: {{cartTotal}}</div>
+</div>

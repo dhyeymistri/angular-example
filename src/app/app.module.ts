@@ -29,6 +29,10 @@ import { AssessmentScoresComponent } from './components/assessment-scores/assess
 import { LoginModalComponent } from './components/login-modal/login-modal.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { AddAssessmentComponent } from './components/add-assessment/add-assessment.component';
+import { HttpClientModule, provideHttpClient } from '@angular/common/http';
+import { ViewAssessmentDetailsComponent } from './components/view-assessment-details/view-assessment-details.component';
+import { CartModalComponent } from './components/cart-modal/cart-modal.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +52,10 @@ import { AddAssessmentComponent } from './components/add-assessment/add-assessme
     UpdateUserComponent,
     AssessmentScoresComponent,
     LoginModalComponent,
-    AddAssessmentComponent
+    AddAssessmentComponent,
+    ViewAssessmentDetailsComponent,
+    CartModalComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -61,10 +68,12 @@ import { AddAssessmentComponent } from './components/add-assessment/add-assessme
     MatInputModule,
     MatSelectModule,
     MatStepperModule,
-    MatIconModule
+    MatIconModule,
+    // HttpClientModule
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    provideHttpClient()
   ],
   bootstrap: [AppComponent]
 })

@@ -5,7 +5,7 @@
       <label for="selectName" class="form-label">Select user</label>
       <select id="selectName" formControlName="selectName" class="form-select bg-mist tx-custom-black" (change)="onChangeType($event)">
         <option selected>Select</option>
-        <option *ngFor="let a of users" [ngValue]="a.userID">{{a.firstName}}</option>
+        <option *ngFor="let a of users" [ngValue]="a.id">{{a.firstName}}</option>
       </select>
     </div>
 

@@ -1,12 +1,14 @@
+import { options } from "./options"
+
 export class Question{
-    questionID: number
+    id: string
     qText: string
     options: string[]
     answer: string
     qType: string
 
-    constructor(id:number, qT: string, opt:string[], ans:string, qType:string){
-        this.questionID = id
+    constructor(id:string, qT: string, opt:string[], ans:string, qType:string){
+        this.id = id
         this.qText = qT
         this.options = opt
         this.answer = ans

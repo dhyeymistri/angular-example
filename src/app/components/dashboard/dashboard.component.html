@@ -1,0 +1,10 @@
+<div class="row d-flex justify-content-center" style="width: 100%;">
+    <div class="card m-5" *ngFor="let aName of arrAssessments" style="width: 18rem;">
+        <img [src]="aName.assessmentImgSrc" class="card-img-top" alt="..." height="250px" width="250px">
+        <div class="card-body">
+          <h5 class="card-title">{{aName.assessmentName}}</h5>
+          <p class="card-text">Here will be the assessment description</p>
+          <a class="btn btn-primary">Take Assessment</a>
+        </div>
+      </div>
+</div>

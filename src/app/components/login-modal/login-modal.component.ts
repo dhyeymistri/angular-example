@@ -20,7 +20,7 @@ export class LoginModalComponent {
 
   onSubmit(val: any){
     if(this.loginForm.valid){
-       this.invalid = this.userService.checkLogin(val);
+       this.invalid = this.userService.Login(val);
     } else console.log("invalid form");
   }
 }

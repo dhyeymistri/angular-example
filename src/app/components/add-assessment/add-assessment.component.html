@@ -41,6 +41,50 @@
                 </mat-select>
             </mat-form-field>
             <div *ngIf="check[i]==1">
+              Enter option 1<input matInput formControlName="opt1" style="margin: 2px;" type="text" required><br>
+              Enter option 2<input matInput formControlName="opt2" style="margin: 2px;" type="text" required><br>
+              Enter option 3<input matInput formControlName="opt3" style="margin: 2px;" type="text" required><br>
+              Enter option 4<input matInput formControlName="opt4" style="margin: 2px;" type="text" required>
+            </div>
+            <div *ngIf="check[i]==2">
+              This will be a True/False question
+            </div>
+                <div class="col-3">
+                <button class="float-left" mat-icon-button color="primary" aria-label="Remove/clear" (click)="removeOrClearItinery(i)" matTooltip="Remove">
+                    <mat-icon>highlight-off</mat-icon>
+                </button>
+                <button class="float-left" mat-icon-button color="primary" aria-label="Add" (click)="addItineryFormGroup()" matTooltip="Add">
+                    <mat-icon>add_circle_outline</mat-icon>
+                </button>
+                <div>
+                    <button mat-button matStepperNext type="submit">Save</button>
+                  </div>
+            </div>
+            </div>
+        </div>
+        </form>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+    </mat-step>
+    <!-- <mat-step [stepControl]="thirdFormGroup">
+      <form [formGroup]="questionForm" class="basic-container" (ngSubmit)="saveSecondStepData(questionForm.value)">
+        <ng-template matStepLabel>Add answers</ng-template>
+        <div formArrayName="questions">
+            <div class="row" *ngFor="let product of questionsArr().controls; let i = index" [formGroupName]="i">
+                <div>
+                <mat-form-field style="margin: 5px;">
+                    <textarea matInput formControlName="qText" placeholder="Question text"></textarea>
+                </mat-form-field>
+            </div>
+            <mat-form-field appearance="fill" style="margin: 5px;padding-bottom: -24px;">
+                <mat-label>Question type</mat-label>
+                <mat-select formControlName="qType" [(value)]="selectedQ[i]" (selectionChange)="onSelectionChange(selectedQ[i],i)">
+                    <mat-option *ngFor="let q of questionLabels" [value]="q">{{q}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <div *ngIf="check[i]==1">
               Enter option 1<input matInput style="margin: 2px;" type="text" required><br>
               Enter option 2<input matInput style="margin: 2px;" type="text" required><br>
               Enter option 3<input matInput style="margin: 2px;" type="text" required><br>
@@ -70,7 +114,7 @@
           <button mat-button matStepperPrevious>Back</button>
           <button mat-button matStepperNext>Next</button>
         </div>
-    </mat-step>
+    </mat-step> -->
     
     
     <mat-step>

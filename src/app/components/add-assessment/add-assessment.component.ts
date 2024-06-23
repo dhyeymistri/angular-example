@@ -10,7 +10,7 @@ import { Question } from '../../models/question';
   styleUrl: './add-assessment.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 
-})
+}) 
 export class AddAssessmentComponent {
   assessment: AssessmentModel = new AssessmentModel(0,0,new Date(),[],0)
   arrQuestions: Question[] = []
@@ -21,6 +21,11 @@ export class AddAssessmentComponent {
   questions:Question[]=[]
   selectedQ:string[]=[]
   check:number[]=[]
+  opt1:string=''
+  opt2:string=''
+  opt3:string=''
+  opt4:string=''
+  optLabel:string[]=[this.opt1, this.opt2,this.opt3,this.opt4]
 
   readonly panelOpenState = signal(false);
 
@@ -32,6 +37,9 @@ export class AddAssessmentComponent {
   });
   secondFormGroup = this.formBuilder.group({
     secondCtrl: ['', Validators.required],
+  });
+  thirdFormGroup = this.formBuilder.group({
+
   });
 
 
@@ -55,10 +63,13 @@ export class AddAssessmentComponent {
   private createQuestionFormGroup(): FormGroup{
     this.count++;
     return new FormGroup({
-      'questionID': new FormControl(this.count, Validators.required),
+      'id': new FormControl(this.count, Validators.required),
       'qText': new FormControl('', Validators.required),
-      'options': new FormControl('', Validators.required),
-      'answer': new FormControl('', Validators.required),
+      'opt1': new FormControl('', Validators.required),
+      'opt2': new FormControl('', Validators.required),
+      'opt3': new FormControl('', Validators.required),
+      'opt4': new FormControl('', Validators.required),
+      // 'answer': new FormControl('', Validators.required),
       'qType': new FormControl('', Validators.required)
     })
   }
@@ -88,24 +99,26 @@ export class AddAssessmentComponent {
   }
 
   saveSecondStepData(formdata:any){
-    // if (this.itineryForm.valid) {
-    //   const formData = this.itineryForm.value;
-    //   console.log(formdata)
-    //   // this.itineries=formdata.products
-    //   formdata.itineries.forEach((fmData:any)=>{
-    //     console.log(fmData.activities)
-    //     let arr_act_temp:Activity[]=[]
-    //     fmData.activities.forEach((act:any)=>{
-    //       for(var j=0;j<this.productLabels.length;j++){
-    //         if(this.productLabels[j]==act){
-    //           arr_act_temp.push(new Activity(j,act))
-    //         }
-    //       }
-    //     })
-    //     console.log(this.itineries);
-    //     this.itineries.push(new Itinery(0,fmData.day,fmData.location,arr_act_temp))
-    //   })
-     
+    console.log(formdata)
+    this.questions=formdata.questions
+      
+      // this.itineries=formdata.products
+      formdata.questions.forEach((fmData:any)=>{
+        var noQ = this.questionService.getQuestions().length+1;
+        var q = new Question(noQ.toString(),fmData.qT,[fmData.opt1,fmData.opt2,fmData.opt3,fmData.opt4],"",fmData.qType);
+        this.arrQuestions.push(q);
+        console.log(this.arrQuestions);
+        // // this.optLabel = [this.opt1, this.opt2, this.opt3, this.opt4]
+        // fmData.options.forEach((act:any)=>{
+        //   for(var j=0;j<this.optLabel.length;j++){
+        //     if(this.optLabel[j]==act){
+        //       arr_opt_temp.push(new Option(j.toString(),act))
+        //     }
+        //   }
+        // })
+        // console.log(this.itineries);
+        // this.itineries.push(new Itinery(0,fmData.day,fmData.location,arr_act_temp))
+      })
     //   // Optional: Call a service to save to backend
     //   console.log('Itineries:', this.itineries);
     //   this.product.itinery=this.itineries
@@ -126,5 +139,5 @@ export class AddAssessmentComponent {
     return this.questionForm.get("questions") as FormArray
   }
 
-
+  
 }

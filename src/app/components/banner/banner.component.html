@@ -17,6 +17,9 @@
         <li class="nav-item active">
           <a class="nav-link tx-sand tx-hov-orange" [routerLink]="['home']">Home</a>
         </li>
+        <li class="nav-item active" *ngIf="showCart">
+          <a class="nav-link tx-sand tx-hov-orange" [routerLink]="['dashboard']">Dashboard</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link tx-sand tx-hov-orange" [routerLink]="['aboutus']">About Us</a>
         </li>
@@ -31,8 +34,8 @@
         </li>
         <li class="mx-2">
           <!-- Button trigger modal -->
-          <button type="button" class="btn bg-orange btn-hov-mist" data-bs-toggle="modal" data-bs-target="#loginModal">
-            Login
+          <button type="button" class="btn bg-orange btn-hov-mist" [attr.data-bs-profile]="checkModal" [attr.data-bs-target]="ModalID" (click)="logout()">
+            {{loginText}}
           </button>
 
           <!-- Modal -->
@@ -86,6 +89,28 @@
                       <button type="submit" class="btn bg-custom-black tx-orange btn-hov-mist" onclick="checkDOB()">Register</button>
                     </div>
                   </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="mx-2">
+          <!-- Button trigger modal -->
+          <button *ngIf="showCart" type="button" class="btn bg-orange btn-hov-mist" data-bs-toggle="modal" data-bs-target="#cartModal">
+            Cart
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content bg-sand">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="registerModalLabel">Cart</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <app-cart-modal></app-cart-modal>
                 </div>
               </div>
             </div>
